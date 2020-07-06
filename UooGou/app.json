@@ -5,7 +5,6 @@
     "pages/shopping/shopping",
     "pages/my/my",
     "pages/goodsList/goodsList",
-    "pages/goodsDetail",
     "pages/goodsDetail/goodsDetail"
   ],
   "window": {
