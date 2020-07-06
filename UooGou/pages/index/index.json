@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "searchInput": "/components/searchInput/searchInput",
+    "swiperBox": "/components/swiperBox/swiperBox",
+    "navigatBox": "/components/navigatBox/navigatBox",
+    "goodsBox": "/components/goodsBox/goodsBox"
+  }
+}

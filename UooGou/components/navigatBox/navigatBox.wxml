@@ -1,0 +1,12 @@
+<!--components/navigatBox/navigatBox.wxml-->
+
+<view class="navBox">
+  <view class="navBoxItem"
+    wx:for="{{navgetList}}"
+    wx:key="goods_id"
+    bind:tap="handleNavItem"
+    data-name="{{item.name}}"
+  >
+    <image class="" src="{{item.image_src}}" mode=""></image>
+  </view>
+</view>

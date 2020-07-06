@@ -1,0 +1,41 @@
+<view class="">
+  <searchInput></searchInput>
+
+  <view class="tabsBox">
+    <view class="tabsItem {{item.isActive?'isActive':''}}"
+      wx:for="{{tabs}}"
+      wx:key="id"
+      bind:tap="handleTabsItem"
+      data-id="{{item.id}}"
+      data-name="{{item.name}}"
+      >
+      {{item.name}}
+      <view class="iconImg" wx:if="{{item.ascendImg}}">
+        <image wx:if="{{!item.isActive}}" src="{{item.ascendImg}}" mode="widthFix"></image>
+        <image wx:else src="{{imgIndex === 2?item.selectAscendImg:item.ascendImg}}" mode="widthFix"></image>
+
+        <image wx:if="{{!item.isActive}}" src="{{item.dropImg}}" mode="widthFix"></image>
+        <image wx:else src="{{imgIndex === 2?item.dropImg:item.selectDropImg}}" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+  <view class="tabsList">
+    <view class="tabsListItem"
+      wx:for="{{goodsList}}"
+      wx:key="goods_id"
+      data-goodsId="{{item.goods_id}}"
+      bind:tap="handleGoodsList"
+      >
+      <view class="tabsItemImg">
+        <image class="" src="{{item.goods_small_logo}}" mode="widthFix"></image>
+      </view>
+      <view class="tabsContent">
+        <p>{{item.goods_name}}</p>
+        <text class="">
+          ￥{{item.goods_price}}
+        </text>
+      </view>
+    </view>
+  </view>
+</view>
+

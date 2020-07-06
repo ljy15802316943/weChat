@@ -1,0 +1,47 @@
+.floor {
+  width: 100%;
+  height: auto;
+  .floorBox {
+    .floorTitle {
+      width: 100%;
+      height: 60rpx;
+      padding-top: 20rpx;
+      background: #EEF1ED;
+      image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .floorList {
+      width: 100%;
+      height: 386rpx;
+      padding: 10rpx;
+      box-sizing: border-box;
+      .floorItem {
+        width: 33%;
+        height: 100%;
+        float: left;
+        image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .floorItem:not(:first-child) {
+        height: 50%;
+        image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .floorItem:nth-child(2),.floorItem:nth-child(4) {
+        padding: 0rpx 10rpx;
+        box-sizing: border-box;
+      }
+      .floorItem:nth-child(4),.floorItem:nth-child(5) {
+        padding-top: 10rpx;
+        box-sizing: border-box;
+      }
+    }
+  }
+}

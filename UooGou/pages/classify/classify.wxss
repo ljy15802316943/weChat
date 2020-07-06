@@ -1,0 +1,58 @@
+.container {
+  width: 100%;
+  height: calc(100vh - 90rpx);
+  display: flex;
+}
+.container .leftBar {
+  flex: 0.2;
+  height: 100%;
+  overflow: scroll;
+}
+.container .leftBar .leftBarItem {
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22rpx;
+  border-left: 2px solid transparent;
+}
+.container .leftBar .leftBarActive {
+  color: #FC5A50;
+  border-left: 2px solid #FC5A50;
+}
+.container .rightContent {
+  flex: 0.8;
+  height: 100%;
+  overflow: scroll;
+}
+.container .rightContent .contentList .contentTitle {
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+}
+.container .rightContent .contentList .contenBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 5rpx;
+}
+.container .rightContent .contentList .contenBox .contentItem {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .rightContent .contentList .contenBox .contentItem image {
+  width: 120rpx;
+  height: 120rpx;
+}
+.container .rightContent .contentList .contenBox .contentItem text {
+  font-size: 22rpx;
+}

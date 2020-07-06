@@ -1,0 +1,47 @@
+.floor {
+  width: 100%;
+  height: auto;
+}
+.floor .floorBox .floorTitle {
+  width: 100%;
+  height: 60rpx;
+  padding-top: 20rpx;
+  background: #EEF1ED;
+}
+.floor .floorBox .floorTitle image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.floor .floorBox .floorList {
+  width: 100%;
+  height: 386rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+.floor .floorBox .floorList .floorItem {
+  width: 33%;
+  height: 100%;
+  float: left;
+}
+.floor .floorBox .floorList .floorItem image {
+  width: 100%;
+  height: 100%;
+}
+.floor .floorBox .floorList .floorItem:not(:first-child) {
+  height: 50%;
+}
+.floor .floorBox .floorList .floorItem:not(:first-child) image {
+  width: 100%;
+  height: 100%;
+}
+.floor .floorBox .floorList .floorItem:nth-child(2),
+.floor .floorBox .floorList .floorItem:nth-child(4) {
+  padding: 0rpx 10rpx;
+  box-sizing: border-box;
+}
+.floor .floorBox .floorList .floorItem:nth-child(4),
+.floor .floorBox .floorList .floorItem:nth-child(5) {
+  padding-top: 10rpx;
+  box-sizing: border-box;
+}

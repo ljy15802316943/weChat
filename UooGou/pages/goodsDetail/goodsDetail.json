@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "swiperBox": "/components/swiperBox/swiperBox"
+  },
+  "navigationBarTitleText": "商品详情"
+}

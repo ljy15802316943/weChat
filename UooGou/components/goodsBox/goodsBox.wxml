@@ -1,0 +1,12 @@
+<view class="floor">
+  <view class="floorBox" wx:for="{{goodsBox}}" wx:for-item="item1" wx:for-index="index1" wx:key="index1">
+    <view class="floorTitle">
+      <image src="{{item1.floor_title.image_src}}" alt="" />
+    </view>
+    <view class="floorList">
+      <view class="floorItem" wx:for="{{item1.product_list}}" wx:for-item="item2" wx:for-index="index2" wx:key="name" data-id="{{item2.cat_id}}" bind:top="handleGoodsItem">
+        <image src="{{item2.image_src}}" alt="" />
+      </view>
+    </view>
+  </view>
+</view>

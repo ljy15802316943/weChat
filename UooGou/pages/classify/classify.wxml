@@ -1,0 +1,46 @@
+<!--pages/classify/classify.wxml-->
+<view class="">
+
+  <!-- 顶部搜索框 -->
+  <searchInput></searchInput>
+
+  <view class="container">
+    <!-- 左边标题栏 -->
+    <view class="leftBar" wx:if="{{categorList.length>0}}">
+      <view class="leftBarItem {{catId === item.cat_id ? 'leftBarActive':''}}"
+        wx:for="{{categorList}}"
+        wx:key="cat_name"
+        bind:tap="handleBarItem"
+        data-id="{{item.cat_id}}"
+        >{{item.cat_name}}
+      </view>
+    </view>
+
+    <!-- 右边内容栏 -->
+    <view class="rightContent">
+      <view class="contentList" 
+        wx:for="{{rightData}}"
+        wx:for-item="item1"
+        wx:key="cat_name"
+        >
+        <view class="contentTitle">
+          / {{item1.cat_name}} /
+        </view>
+        <view class="contenBox">
+          <view class="contentItem" 
+            wx:for="{{item1.children}}" 
+            wx:for-item="item2" 
+            wx:key="cat_name"
+            bind:tap="handleCatItem"
+            data-id="{{item2.cat_id}}"
+            >
+            <image src="{{item2.cat_icon}}" mode="widthFix"></image>
+            <text class="">{{item2.cat_name}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+
+</view>

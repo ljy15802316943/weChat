@@ -1,0 +1,14 @@
+<view>
+  <!-- 搜索栏 -->
+  <searchInput></searchInput>
+
+  <!-- 轮播图 -->
+  <swiperBox swiperList="{{swiperList}}" wx:if="{{swiperList.length>0}}"></swiperBox>
+
+  <!-- 导航栏 -->
+  <navigatBox navgetList="{{navgetList}}" wx:if="{{navgetList.length>0}}"></navigatBox>
+
+  <!-- 商品详情 -->
+  <goodsBox goodsBox="{{goodsBox}}" wx:if="{{goodsBox.length>0}}"></goodsBox>
+  
+</view>

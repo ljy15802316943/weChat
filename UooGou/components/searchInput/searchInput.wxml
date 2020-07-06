@@ -1,0 +1,7 @@
+<!--components/searchInput/searchInput.wxml-->
+<view class="seachInput">
+  <view class="seachInputItem" bind:tap="handleSearch">
+    <image src="../../static/img/search.png" alt="" />
+      搜索
+  </view>
+</view>

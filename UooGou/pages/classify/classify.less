@@ -1,0 +1,61 @@
+.container {
+  width: 100%;
+  height: calc(100vh - 90rpx);
+  display: flex;
+  .leftBar {
+    flex: 0.2;
+    height: 100%;
+    overflow: scroll;
+    .leftBarItem {
+      width: 100%;
+      height: 60rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 22rpx;
+      border-left: 2px solid transparent;
+    }
+    .leftBarActive {
+      color: #FC5A50;
+      border-left: 2px solid #FC5A50;
+    }
+  }
+  .rightContent {
+    flex: 0.8;
+    height: 100%;
+    overflow: scroll;
+    .contentList {
+      .contentTitle {
+        width: 100%;
+        height: 60rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 28rpx;
+      }
+      .contenBox {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 5rpx;
+        .contentItem {
+          width: 33.33%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          image {
+            width: 120rpx;
+            height: 120rpx;
+          }
+          text {
+            font-size: 22rpx;
+          }
+        }
+      }
+    }
+  }
+}
+
