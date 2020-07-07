@@ -25,9 +25,7 @@ Page({
     wx.chooseAddress({
       success: (result)=>{
         console.log(result);
-      },
-      fail: ()=>{},
-      complete: ()=>{}
+      }
     });
   }
 })
