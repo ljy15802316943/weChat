@@ -1,2 +1,7 @@
-<!--pages/shopping/shopping.wxml-->
-<text>pages/shopping/shopping.wxml</text>
+<view class="shopping">
+  <view class="shippingAddress">
+    <button  type="primary" plain bind:tap="handleAddress">
+      获取收货地址
+    </button>
+  </view>
+</view>

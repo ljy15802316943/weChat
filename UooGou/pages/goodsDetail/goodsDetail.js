@@ -78,5 +78,8 @@ Page({
     wx.pageScrollTo({
       scrollTop: 0
     });
+  },
+  handleTomBtn(e) {
+    console.log(e);    
   }
 })

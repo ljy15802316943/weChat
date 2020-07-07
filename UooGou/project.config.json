@@ -79,6 +79,13 @@
 					"pathName": "pages/goodsDetail/goodsDetail",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "购物车",
+					"pathName": "pages/shopping/shopping",
+					"query": "",
+					"scene": null
 				}
 			]
 		}
