@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "swiperBox": "/components/swiperBox/swiperBox"
+    "swiperBox": "/components/swiperBox/swiperBox",
+    "scrollTop": "/components/scrollTop/scrollTop"
   },
   "navigationBarTitleText": "商品详情"
 }

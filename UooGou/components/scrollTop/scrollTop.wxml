@@ -1,0 +1,3 @@
+<view class="scrollTop" bind:tap="handleVBtn">
+  <image class="" src="../../static/img/scrollTop.png" mode="widthFix" />
+</view>

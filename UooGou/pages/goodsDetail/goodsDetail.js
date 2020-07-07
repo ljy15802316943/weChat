@@ -10,7 +10,8 @@ Page({
     goodsId: 40000,
     goodsList: [],
     goodsData: {},
-    urls: []
+    urls: [],
+    scroTopHidden: false
   },
 
   /**
@@ -51,6 +52,7 @@ Page({
       })
   },
 
+  // 轮播图预览
   handleGoodsList(e) {
     let current = e.currentTarget.dataset.index;
     let { urls } = this.data;
@@ -59,46 +61,22 @@ Page({
       urls // 需要预览的图片http链接列表
     })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  // 监听页面滚动
+  onPageScroll(e) {
+    let { scroTopHidden } = this.data;
+    if (e.scrollTop >= 120) {
+      scroTopHidden = true;
+    } else {
+      scroTopHidden = false;
+    }
+    this.setData({
+      scroTopHidden
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  // 页面回到顶部
+  handleVBtn() {
+    wx.pageScrollTo({
+      scrollTop: 0
+    });
   }
 })

@@ -27,4 +27,7 @@
   </view>
   <view class="line"></view>
   <rich-text nodes="{{goodsData.goods_introduce}}"></rich-text>
+
+  <!-- 回到顶部 -->
+  <scrollTop wx:if="{{scroTopHidden}}" bind:handleVBtn="handleVBtn"></scrollTop>
 </view>
