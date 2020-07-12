@@ -1,7 +1,43 @@
 <view class="shopping">
-  <view class="shippingAddress">
+  <view class="shippingAddress" wx:if="{{!Cates.userName}}">
     <button  type="primary" plain bind:tap="handleAddress">
       获取收货地址
     </button>
+  </view>
+  <view wx:else class="address" >
+    <view class="name">
+      <text >{{Cates.userName}}</text>
+      <text >{{Cates.address}}</text>
+    </view>
+    <view class="pbone">
+      {{Cates.phone}}
+    </view>
+  </view>
+
+  <view class="carTitle">购物车</view>
+  <view class="carShipping">
+    <checkbox-group bindchange="">
+      <checkbox  color="#F9544E" />
+    </checkbox-group>
+    <image class="" src="https://api-hmugo-web.itheima.net/full/2fb113b32f7a2b161f5ee4096c319afedc3fd5a1.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+    <view class="carInfo">
+      <view class="carInfoTitle">士大夫大师傅似的的事发生发射点大师傅是撒旦发生士大夫士大夫士大夫士大夫是违法潍坊市士大夫胜多负少DVD是</view>
+      <view class="carInfoBom">
+        <view class="price" hover-class="none" hover-stop-propagation="false">
+          ￥9988
+        </view>
+        <view class="groupBox" hover-class="none" hover-stop-propagation="false">
+          <text class="" selectable="false" space="false" decode="false">
+            -
+          </text>
+          <text class="" selectable="false" space="false" decode="false">
+            1
+          </text>
+          <text class="" selectable="false" space="false" decode="false">
+            +
+          </text>
+        </view>
+      </view>
+    </view>
   </view>
 </view>
