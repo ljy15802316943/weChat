@@ -29,42 +29,63 @@
   border-top: 1px solid #FA544C;
   border-bottom: 1px solid #FA544C;
 }
-.carShipping {
+.carGroup {
   width: 100%;
-  height: 300rpx;
+  height: 180rpx;
+  border: 1px solid #999999;
+  padding: 10rpx;
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  align-content: center;
+  align-items: center;
 }
-.carShipping checkbox-group {
-  flex: 2;
-  height: auto;
+.carGroup checkbox-group {
+  flex: 0.1;
 }
-.carShipping image {
-  flex: 3;
+.carGroup .carsImg {
+  flex: 0.2;
+  height: 100%;
+}
+.carGroup .carsImg image {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
-.carShipping .carInfo {
-  flex: 5;
+.carGroup .bomGroup {
+  flex: 0.7;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
-.carShipping .carInfo .carInfoTitle {
+.carGroup .bomGroup h3 {
+  font-size: 30rpx;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
 }
-.carShipping .carInfo .carInfoBom {
+.carGroup .bomGroup .carIndexBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.carGroup .bomGroup .carIndexBox .catItemPrice {
+  font-size: 36rpx;
+  color: #EC2126;
+}
+.carGroup .bomGroup .carIndexBox .carIndex {
   display: flex;
 }
-.carShipping .carInfo .carInfoBom .price {
-  flex: 6;
-}
-.carShipping .carInfo .carInfoBom .groupBox {
-  flex: 1;
+.carGroup .bomGroup .carIndexBox .carIndex .subtract,
+.carGroup .bomGroup .carIndexBox .carIndex .add {
+  width: 50rpx;
+  height: 50rpx;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1rpx solid #ccc;
+}
+.carGroup .bomGroup .carIndexBox .carIndex .amount {
+  margin: 0 15rpx;
 }

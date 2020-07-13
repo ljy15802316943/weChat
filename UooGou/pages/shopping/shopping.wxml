@@ -15,27 +15,29 @@
   </view>
 
   <view class="carTitle">购物车</view>
-  <view class="carShipping">
-    <checkbox-group bindchange="">
-      <checkbox  color="#F9544E" />
+  <view class="carGroup">
+    <checkbox-group bindchange="checkboxChange">
+      <checkbox class="" value="">
+        
+      </checkbox>
     </checkbox-group>
-    <image class="" src="https://api-hmugo-web.itheima.net/full/2fb113b32f7a2b161f5ee4096c319afedc3fd5a1.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
-    <view class="carInfo">
-      <view class="carInfoTitle">士大夫大师傅似的的事发生发射点大师傅是撒旦发生士大夫士大夫士大夫士大夫是违法潍坊市士大夫胜多负少DVD是</view>
-      <view class="carInfoBom">
-        <view class="price" hover-class="none" hover-stop-propagation="false">
-          ￥9988
-        </view>
-        <view class="groupBox" hover-class="none" hover-stop-propagation="false">
-          <text class="" selectable="false" space="false" decode="false">
+    <view class="carsImg" hover-class="none" hover-stop-propagation="false">
+      <image src="http://image2.suning.cn/uimg/b2c/newcatentries/0070177617-000000000618993401_2_400x400.jpg"></image>
+    </view>
+    <view class="bomGroup" hover-class="none" hover-stop-propagation="false">
+      <h3>小程序数据分析，是面向小程序开发者、运营者的数据分析工具，提供关键指标统计、实时访问监控、自定义分析等，帮助小程序产品迭代优化和运营。主要功能包括每日例行统计的标准分析，以及满足用户个性化需求的自定义分析。</h3>
+      <view class="carIndexBox" hover-class="none" hover-stop-propagation="false">
+        <view class="catItemPrice">￥999</view>
+        <view class="carIndex">
+          <view class="subtract">
             -
-          </text>
-          <text class="" selectable="false" space="false" decode="false">
-            1
-          </text>
-          <text class="" selectable="false" space="false" decode="false">
+          </view>
+          <view class="amount">
+            10
+          </view>
+          <view class="add">
             +
-          </text>
+          </view>
         </view>
       </view>
     </view>
