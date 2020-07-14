@@ -32,7 +32,7 @@
 .carGroup {
   width: 100%;
   height: 180rpx;
-  border: 1px solid #999999;
+  border-bottom: 1px solid #ededed;
   padding: 10rpx;
   box-sizing: border-box;
   display: flex;
@@ -43,7 +43,7 @@
   flex: 0.1;
 }
 .carGroup .carsImg {
-  flex: 0.2;
+  flex: 0.3;
   height: 100%;
 }
 .carGroup .carsImg image {
@@ -52,7 +52,7 @@
   object-fit: cover;
 }
 .carGroup .bomGroup {
-  flex: 0.7;
+  flex: 0.6;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -88,4 +88,58 @@
 }
 .carGroup .bomGroup .carIndexBox .carIndex .amount {
   margin: 0 15rpx;
+}
+.bomBox {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0rpx;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+  z-index: 10;
+}
+.bomBox .checkboxAll {
+  flex: 0.2;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  border-top: 1px solid #ededed;
+}
+.bomBox .indexCenter {
+  flex: 0.5;
+  height: 100%;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 10rpx;
+  box-sizing: border-box;
+  border-top: 1px solid #ededed;
+}
+.bomBox .indexCenter .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.bomBox .indexCenter .top .text {
+  font-size: 32rpx;
+}
+.bomBox .indexCenter .top .jine {
+  font-size: 38rpx;
+  color: #EC2126;
+}
+.bomBox .indexCenter .bottom {
+  font-size: 30rpx;
+}
+.bomBox .jiesuan {
+  flex: 0.3;
+  background-color: #EC2126;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 36rpx;
+  border-top: 1px solid #EC2126;
 }

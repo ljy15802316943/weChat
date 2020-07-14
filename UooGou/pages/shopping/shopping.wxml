@@ -42,4 +42,54 @@
       </view>
     </view>
   </view>
+  <view class="carGroup">
+    <checkbox-group bindchange="checkboxChange">
+      <checkbox class="" value="">
+        
+      </checkbox>
+    </checkbox-group>
+    <view class="carsImg" hover-class="none" hover-stop-propagation="false">
+      <image src="http://image2.suning.cn/uimg/b2c/newcatentries/0070177617-000000000618993401_2_400x400.jpg"></image>
+    </view>
+    <view class="bomGroup" hover-class="none" hover-stop-propagation="false">
+      <h3>小程序数据分析，是面向小程序开发者、运营者的数据分析工具，提供关键指标统计、实时访问监控、自定义分析等，帮助小程序产品迭代优化和运营。主要功能包括每日例行统计的标准分析，以及满足用户个性化需求的自定义分析。</h3>
+      <view class="carIndexBox" hover-class="none" hover-stop-propagation="false">
+        <view class="catItemPrice">￥999</view>
+        <view class="carIndex">
+          <view class="subtract">
+            -
+          </view>
+          <view class="amount">
+            10
+          </view>
+          <view class="add">
+            +
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="bomBox">
+    <view class="checkboxAll" hover-class="none" hover-stop-propagation="false">
+      <checkbox-group class="" bindchange="bomCheckboxChange">
+        <checkbox class="" value=""></checkbox>全选
+      </checkbox-group>
+    </view>
+    <view class="indexCenter">
+      <view class="top">
+        <view class="text">
+          合计：
+        </view>
+        <view class="jine" hover-class="none" hover-stop-propagation="false">
+          ￥999
+        </view>
+      </view>
+      <view class="bottom">
+        包含运费
+      </view>
+    </view>
+    <view class="jiesuan">
+      结算(1)
+    </view>
+  </view>
 </view>
