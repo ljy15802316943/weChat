@@ -6,12 +6,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    goodsDetailList: [],
-    goodsId: 40000,
     goodsList: [],
+    goodsId: null,
     goodsData: {},
     urls: [],
-    scroTopHidden: false
+    scroTopHidden: false,
+    list: []
   },
 
   /**
@@ -33,20 +33,16 @@ Page({
   },
 
   getGoodsDetailData() {
-    let { goodsDetailList, goodsList, urls, goodsId } = this.data;
+    let { goodsList, goodsData, urls, goodsId } = this.data;
     request({url:'/goods/detail',data:{goods_id: Number(goodsId)}})
       .then((res) => {
-        goodsDetailList = res.data.message;
-        goodsList = goodsDetailList.pics;
+        goodsList = res.data.message.pics;
         urls = goodsList.map((k, v) => k.pics_mid);
+        goodsData = res.data.message;
+        goodsData.goods_introduce = goodsData.goods_introduce.replace(/\.webp/g, '.jpg');
         this.setData({
-          goodsDetailList,
           goodsList,
-          goodsData: {
-            goods_name: res.data.message.goods_name,
-            goods_price: res.data.message.goods_price,
-            goods_introduce: res.data.message.goods_introduce.replace(/\.webp/g,'.jpg')
-          },
+          goodsData,
           urls
         })
       })
@@ -79,7 +75,26 @@ Page({
       scrollTop: 0
     });
   },
-  handleTomBtn(e) {
-    console.log(e);    
+  // 加入购物车
+  handleCartAdd() {
+    let { goodsData } = this.data;
+    let cart = wx.getStorageSync('cart') || [];
+    let index = cart.findIndex(v => v.goods_id === goodsData.goods_id);
+    if (index === -1) {
+      // 商品不存在
+      goodsData.num = 1;
+      goodsData.checkbox = false;
+      cart.push(goodsData);
+    } else {
+      // 商品存在
+      cart[index].num += 1;
+    }
+    wx.setStorageSync('cart', cart);
+    // 加入购物车成功提示
+    wx.showToast({
+      title: '加入购物车',
+      icon: 'success',
+      mask: true
+    });
   }
 })

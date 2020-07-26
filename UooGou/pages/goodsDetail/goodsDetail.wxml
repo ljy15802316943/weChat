@@ -47,10 +47,10 @@
       购物车
       <navigator url="/pages/shopping/shopping" open-type="switchTab"></navigator>
     </view>
-    <view class="addShopping" bind:tap="handleTomBtn" data-text="加入购物车">
+    <view class="addShopping" bind:tap="handleCartAdd">
       加入购物车
     </view>
-    <view class="immediately" bind:tap="handleTomBtn" data-text="立即购买">
+    <view class="immediately">
       立即购买
     </view>
   </view>
