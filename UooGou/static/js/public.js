@@ -1,5 +1,5 @@
 // 购物车列表删除提示
-let deleteCart = function () {
+const deleteCart = function () {
   return new Promise((resolve,reject) => {
     wx.showModal({
       title: '确定要删除吗？',
@@ -11,9 +11,25 @@ let deleteCart = function () {
       }
     });
   })
+};
+
+
+const showToast = function (title) {
+  return new Promise((resolve,reject) => {
+    wx.showToast({
+      title: title,
+      icon: 'none',
+      success: (res)=>{
+        resolve(res);
+      },
+      fail: (err)=>{
+        reject(err);
+      }
+    });
+  })
 }
 
-
 export {
-  deleteCart
+  deleteCart,
+  showToast
 }

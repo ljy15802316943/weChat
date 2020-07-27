@@ -1,6 +1,6 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "购物车",
+  "navigationBarTitleText": "商品支付",
   "enablePullDownRefresh": true,
   "backgroundTextStyle": "dark"
 }

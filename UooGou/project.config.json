@@ -23,7 +23,7 @@
 			"outputPath": ""
 		},
 		"useIsolateContext": true,
-		"useCompilerModule": false,
+		"useCompilerModule": true,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
@@ -85,6 +85,13 @@
 					"id": -1,
 					"name": "购物车",
 					"pathName": "pages/shopping/shopping",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品支付",
+					"pathName": "pages/pay/pay",
 					"query": "",
 					"scene": null
 				}

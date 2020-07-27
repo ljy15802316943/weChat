@@ -1,4 +1,4 @@
-import { deleteCart } from '../../static/js/public'
+import { deleteCart, showToast } from '../../static/js/public'
 Page({
 
   /**
@@ -101,6 +101,23 @@ Page({
     };
 
     this.setCart(cart);
+  },
+  // 点击结算
+  handlePay() {
+    let { CartData, jieSuan } = this.data;
+    if (!CartData.address) {
+      showToast('您未填写地址!')
+      return;
+    }
+    if (!jieSuan.allNum) {
+      showToast('您未选择商品!')
+      return;
+    };
+
+    wx.setStorageSync('jieSuan', jieSuan);
+    wx.navigateTo({
+      url: '/pages/pay/pay?a=111'
+    });
   },
   setCart(cart) {
     let { jieSuan } = this.data;

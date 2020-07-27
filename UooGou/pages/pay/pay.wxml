@@ -22,9 +22,6 @@
     wx:key="goods_id"
     wx:if="{{cart.length>=1}}"
   >
-    <checkbox-group data-goodsId="{{item.goods_id}}" bindchange="checkboxChange">
-      <checkbox class="" checked="{{item.checkbox}}" value=""></checkbox>
-    </checkbox-group>
     <view class="carsImg" hover-class="none" hover-stop-propagation="false">
       <image src="{{item.goods_big_logo}}"></image>
     </view>
@@ -33,14 +30,8 @@
       <view class="carIndexBox" hover-class="none" hover-stop-propagation="false">
         <view class="catItemPrice">￥{{item.goods_price}}</view>
         <view class="carIndex">
-          <view class="subtract" data-operation="-"  data-goodsId="{{item.goods_id}}" bind:tap="handleNum">
-            -
-          </view>
           <view class="amount">
-            {{item.num}}
-          </view>
-          <view class="add"  data-operation="+"  data-goodsId="{{item.goods_id}}" bind:tap="handleNum">
-            +
+            x {{item.num}}
           </view>
         </view>
       </view>
@@ -54,9 +45,6 @@
   <!-- 底部应用栏 -->
   <view class="bomBox">
     <view class="checkboxAll" hover-class="none" hover-stop-propagation="false">
-      <checkbox-group class="" bindchange="handleCheckAll">
-        <checkbox class="" checked="{{jieSuan.checkAll}}" value=""></checkbox>全选
-      </checkbox-group>
     </view>
     <view class="indexCenter">
       <view class="top">
