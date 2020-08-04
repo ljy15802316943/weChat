@@ -1,1 +1,113 @@
-/* pages/my/my.wxss */
+page {
+  background: #ededed;
+}
+.user_info_wrap {
+  width: 100%;
+  height: 45vh;
+  background-color: #EC2126;
+  overflow: hidden;
+}
+.user_info_wrap .user_bg_wrap {
+  position: relative;
+}
+.user_info_wrap .user_bg_wrap .user_bg {
+  height: 50vh;
+  object-fit: cover;
+  filter: blur(5rpx);
+}
+.user_info_wrap .user_bg_wrap .user_info {
+  position: absolute;
+  top: 100rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.user_info_wrap .user_bg_wrap .user_info .user_info_image {
+  width: 150rpx;
+  height: 150rpx;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.user_info_wrap .user_bg_wrap .user_info .user_name {
+  font-size: 32rpx;
+  color: #fff;
+}
+.user_info_wrap .get_login_userinfo {
+  width: 40%;
+  position: absolute;
+  top: 200rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main {
+  position: relative;
+}
+.main .main_warp {
+  width: 90%;
+  color: #666;
+  font-size: 32rpx;
+  position: absolute;
+  top: -40rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 100rpx;
+  box-sizing: border-box;
+}
+.main .main_warp .user_nav {
+  display: flex;
+  background: #ffffff;
+}
+.main .main_warp .user_nav navigator {
+  padding: 10rpx 0;
+  box-sizing: border-box;
+  flex: 1;
+  text-align: center;
+}
+.main .main_warp .user_nav navigator .user_nav_num {
+  color: #F9544E;
+}
+.main .main_warp .user_order {
+  margin-top: 20rpx;
+  background: #ffffff;
+}
+.main .main_warp .user_order .user_order_t {
+  padding: 20rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #ededed;
+}
+.main .main_warp .user_order .user_order_info {
+  display: flex;
+}
+.main .main_warp .user_order .user_order_info navigator {
+  flex: 1;
+  text-align: center;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+.main .main_warp .user_order .user_order_info navigator .user_order_icon image {
+  width: 80rpx;
+  height: 80rpx;
+  object-fit: cover;
+}
+.main .main_warp .user_address {
+  padding: 20rpx;
+  margin-top: 20rpx;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+.main .main_warp .user_item {
+  padding: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #ffffff;
+  margin-top: 20rpx;
+}
+.main .main_warp .user_fankui,
+.main .main_warp .user_my {
+  margin-top: 4rpx;
+}
+.main .main_warp .user_tuijian {
+  margin-top: 20rpx;
+}

@@ -43,7 +43,7 @@
   </view>
 
   <!-- 底部应用栏 -->
-  <view class="bomBox">
+  <view class="bomBox" wx:if="{{cart.length>0}}">
     <view class="checkboxAll" hover-class="none" hover-stop-propagation="false">
     </view>
     <view class="indexCenter">
@@ -62,5 +62,11 @@
     <view class="jiesuan" bind:tap="handlePay">
       结算({{jieSuan.allNum}})
     </view>
+  </view>
+  <!-- 去往订单页 -->
+  <view class="" wx:else>
+    <navigator class="" target="" url=""  open-type="navigate">
+      订单页
+    </navigator>
   </view>
 </view>

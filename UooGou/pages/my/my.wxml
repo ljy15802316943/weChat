@@ -1,2 +1,95 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="">
+  <!-- 个人信息 -->
+  <view class="user_info_wrap">
+    <!-- 图片，名字信息 -->
+    <view class="user_bg_wrap" wx:if="{{userInfo.avatarUrl}}">
+      <image class="user_bg" src="{{userInfo.avatarUrl}}" />
+      <view class="user_info">
+        <image class="user_info_image" src="{{userInfo.avatarUrl}}" />
+        <view class="user_name">{{userInfo.nickName}}</view>
+      </view>
+    </view>
+    <!-- 登录获取 图片，名字信息 -->
+    <button wx:else class="get_login_userinfo"  bind:getuserinfo="getUserInfo" type="primary" plain open-type="getUserInfo">
+      登录
+    </button>
+  </view>
+
+  <!-- main信息 -->
+  <view class="main">
+    <view class="main_warp">
+      <!-- 导航栏 -->
+      <view class="user_nav" hover-class="none" hover-stop-propagation="false">
+        <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+          <view class="user_nav_num">0</view>
+          <view class="user_nav_text">收藏的店铺</view>
+        </navigator>
+        <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+          <view class="user_nav_num">{{userNavNum}}</view>
+          <view class="user_nav_text">收藏的商品</view>
+        </navigator>
+        <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+          <view class="user_nav_num">0</view>
+          <view class="user_nav_text">关注的商品</view>
+        </navigator>
+        <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+          <view class="user_nav_num">0</view>
+          <view class="user_nav_text">我的足迹</view>
+        </navigator>
+      </view>
+      <!-- 我的订单 -->
+      <view class="user_order" hover-class="none" hover-stop-propagation="false">
+        <view class="user_order_t">
+          我的订单
+        </view>
+        <view class="user_order_info">
+          <navigator class="" target="" url="/pages/order/order?type=1" hover-class="navigator-hover" open-type="navigate">
+            <view class="user_order_icon">
+              <image class="" src="../../static/img/dindan.png" />
+            </view>
+            <view class="user_order_text">全部订单</view>
+          </navigator>
+          <navigator class="" target="" url="/pages/order/order?type=2" hover-class="navigator-hover" open-type="navigate">
+            <view class="user_order_icon">
+              <image class="" src="../../static/img/daifukuan.png" />
+            </view>
+            <view class="user_order_text">待付款</view>
+          </navigator>
+          <navigator class="" target="" url="/pages/order/order?type=3" hover-class="navigator-hover" open-type="navigate">
+            <view class="user_order_icon">
+              <image class="" src="../../static/img/daishouhuo.png" />
+            </view>
+            <view class="user_order_text">待收货</view>
+          </navigator>
+          <navigator class="" target="" url="/pages/order/order?type=4" hover-class="navigator-hover" open-type="navigate">
+            <view class="user_order_icon">
+              <image class="" src="../../static/img/tuikuan.png" />
+            </view>
+            <view class="user_order_text">退款/退货</view>
+          </navigator>
+        </view>
+      </view>
+      <!-- 收货地址 -->
+      <view class="user_address">
+        收货地址管理
+      </view>
+      <!-- 联系客服 -->
+      <view class="user_item">
+        <view class="user_item_text">联系客服</view>
+        <view class="user_item_phone">400-618-4000</view>
+      </view>
+      <!-- 意见反馈 -->
+      <view class="user_item user_fankui">
+        意见反馈
+      </view>
+      <!-- 关于我们 -->
+      <view class="user_item user_my">
+        关于我们
+      </view>
+      <!-- 推荐他人 -->
+      <view class="user_item user_tuijian">
+        把应用推荐给其他人
+      </view>
+    </view>
+  </view>
+</view>

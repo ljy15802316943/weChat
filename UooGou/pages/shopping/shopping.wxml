@@ -55,7 +55,7 @@
   <view class="bomBox">
     <view class="checkboxAll" hover-class="none" hover-stop-propagation="false">
       <checkbox-group class="" bindchange="handleCheckAll">
-        <checkbox class="" checked="{{jieSuan.checkAll}}" value=""></checkbox>全选
+        <checkbox class="" disabled="{{disabled}}" checked="{{jieSuan.checkAll}}" value=""></checkbox>全选
       </checkbox-group>
     </view>
     <view class="indexCenter">

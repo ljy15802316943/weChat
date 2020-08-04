@@ -13,9 +13,9 @@
   <view class="price">￥ {{goodsData.goods_price}}</view>
   <view class="detailBox">
     <view class="title">{{goodsData.goods_name}}</view>
-    <view class="collect">
+    <view class="collect" bind:tap="handleCollect">
       <view class="image">
-        <image class="" src="../../static/img/collect.png" mode="widthFix"></image>
+        <image class="" src="{{collectState ? '../../static/img/shouchang.png' : '../../static/img/collect.png'}}" mode="widthFix"></image>
       </view>
       <view class="collectionText">
         收藏

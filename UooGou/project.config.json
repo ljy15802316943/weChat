@@ -23,7 +23,7 @@
 			"outputPath": ""
 		},
 		"useIsolateContext": true,
-		"useCompilerModule": true,
+		"useCompilerModule": false,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
@@ -75,10 +75,10 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 2,
 					"name": "商品详情",
 					"pathName": "pages/goodsDetail/goodsDetail",
-					"query": "",
+					"query": "goods_id=25973",
 					"scene": null
 				},
 				{
@@ -92,6 +92,13 @@
 					"id": -1,
 					"name": "商品支付",
 					"pathName": "pages/pay/pay",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/my/my",
 					"query": "",
 					"scene": null
 				}

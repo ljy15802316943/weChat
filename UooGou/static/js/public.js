@@ -18,7 +18,7 @@ const showToast = function (title) {
   return new Promise((resolve,reject) => {
     wx.showToast({
       title: title,
-      icon: 'none',
+      mask: true,
       success: (res)=>{
         resolve(res);
       },
@@ -29,7 +29,23 @@ const showToast = function (title) {
   })
 }
 
+const showModal = function (params) {
+
+  return new Promise((resolve,reject) => {
+    wx.showModal({
+      ...params,
+      success: (res) => {
+        resolve(res);
+      },
+      fail: (err)=>{
+        reject(err)
+      }
+    });
+  })
+}
+
 export {
   deleteCart,
-  showToast
+  showToast,
+  showModal
 }

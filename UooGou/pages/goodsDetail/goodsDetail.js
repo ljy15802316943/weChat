@@ -1,5 +1,6 @@
 // pages/goodsDetail.js
 import { request } from '../../static/js/api.js';
+import { showToast } from '../../static/js/public';
 Page({
 
   /**
@@ -11,27 +12,24 @@ Page({
     goodsData: {},
     urls: [],
     scroTopHidden: false,
-    list: []
+    list: [],
+    collectState: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let { goodsId } = this.data;
+    let goodsId = options.goods_id;
+    let shouchang = wx.getStorageSync('shouchang') || [];
+    let collectState = shouchang.some(v => v.goods_id==goodsId);
+    
     this.setData({
-      goodsId:options.goods_id || goodsId
+      goodsId,
+      collectState
     });
     this.getGoodsDetailData();
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
   getGoodsDetailData() {
     let { goodsList, goodsData, urls, goodsId } = this.data;
     request({url:'/goods/detail',data:{goods_id: Number(goodsId)}})
@@ -96,5 +94,25 @@ Page({
       icon: 'success',
       mask: true
     });
+  },
+  // 加入收藏
+  handleCollect() {
+    let { collectState, goodsData, goodsId } = this.data;
+    let shouchang = wx.getStorageSync('shouchang')||[];
+    let index = shouchang.findIndex(v => v.goods_id === goodsId);
+
+    collectState = !collectState;
+
+    if (collectState) {
+      showToast('收藏成功')
+      shouchang.push(goodsData);
+    } else {
+      showToast('取消收藏')
+      shouchang.splice(index, 1);
+    }
+    wx.setStorageSync('shouchang',shouchang);
+    this.setData({
+      collectState
+    })
   }
 })

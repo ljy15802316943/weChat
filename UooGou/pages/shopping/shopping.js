@@ -12,8 +12,9 @@ Page({
     jieSuan: {
       checkAll: false,
       allNum: 0,
-      allPrice: 0,
+      allPrice: 0
     },
+    disabled: true
   },
 
   /**
@@ -23,13 +24,19 @@ Page({
 
   },
   onShow() {
+    let { disabled } = this.data;
     let CartData = wx.getStorageSync('CartData') || {};
     let cart = wx.getStorageSync('cart') || [];
 
+    if (cart.length!=0) {
+      disabled=false;
+    } else {
+      disabled = true;
+    }
     this.setData({
       CartData,
+      disabled
     });
-
     this.setCart(cart);
   },
   // 获取用户地址权限
@@ -67,6 +74,7 @@ Page({
   handleCheckAll (e) {
     let { jieSuan } = this.data;
     let cart = wx.getStorageSync('cart') || [];
+   
     jieSuan.checkAll = !jieSuan.checkAll;
     cart.forEach(v => jieSuan.checkAll ? v.checkbox = true : v.checkbox=false);
 

@@ -1,4 +1,4 @@
-// pages/pay/pay.js
+import { showModal, showToast } from '../../static/js/public'
 Page({
 
   /**
@@ -11,9 +11,9 @@ Page({
   },
 
   /**
-   * 生命周期函数--监听页面初次渲染完成
+   * 生命周期函数--监听页面显示
    */
-  onReady: function () {
+  onShow: function () {
     let jieSuan = wx.getStorageSync('jieSuan');
     let CartData = wx.getStorageSync('CartData');
     let cart = wx.getStorageSync('cart').filter(v => v.checkbox);
@@ -23,32 +23,24 @@ Page({
       CartData,
     });
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  handlePay() {
+    let cart = wx.getStorageSync('cart')||[];
+    let order = [];
+    showModal({title: '提示消息', content: '您将选择支付商品'})
+      .then(res => {
+        if (res.confirm) {
+          showToast('支付成功');
+          order = cart.filter((res) => res.checkbox);
+          cart = cart.filter((res) => !res.checkbox);
+          cart.map(res => {
+            res.timestamp = new Date().getTime();
+          })
+          wx.setStorageSync('order', order);
+          wx.setStorageSync('cart', cart);
+          this.setData({
+            cart: []
+          });
+        }
+      })
   }
 })
