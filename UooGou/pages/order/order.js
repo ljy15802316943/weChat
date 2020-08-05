@@ -5,14 +5,40 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    tabBar: [
+      {
+        id: 0,
+        text: '全部订单',
+        isActive: true
+      },
+      {
+        id: 1,
+        text: '待付款',
+        isActive: false
+      },
+      {
+        id: 2,
+        text: '待收货',
+        isActive: false
+      },
+      {
+        id: 3,
+        text: '退款退货',
+        isActive: false
+      },
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options,111);
+    let { tabBar } = this.data;
+    let id = Number(options.type)-1;
+    tabBar.forEach(v => v.id === id ? v.isActive = true : v.isActive = false);
+    this.setData({
+      tabBar
+    })
   },
 
   /**
@@ -29,11 +55,13 @@ Page({
 
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  handleTabBar(e) {
+    let { tabBar } = this.data;
+    let { id } = e.currentTarget.dataset;
+    tabBar.forEach(v => v.id===id?v.isActive=true:v.isActive=false);
+    this.setData({
+      tabBar
+    })
   },
 
   /**

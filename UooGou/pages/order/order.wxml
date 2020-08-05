@@ -1,2 +1,13 @@
-<!--pages/order/order.wxml-->
-<text>pages/order/order.wxml</text>
+<view class="">
+  <!-- 导航栏 -->
+  <view class="tabBar_container">
+    <view class="tabBar_item {{item.isActive?'isActive':''}}"
+      wx:for="{{tabBar}}"
+      wx:key="id"
+      data-id="{{item.id}}"
+      bind:tap="handleTabBar"
+    >
+      {{item.text}}
+    </view>
+  </view>
+</view>
