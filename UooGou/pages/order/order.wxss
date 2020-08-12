@@ -11,5 +11,52 @@
   border-bottom: 2rpx solid transparent;
 }
 .tabBar_container .isActive {
+  color: #EC2126;
   border-bottom: 2rpx solid #EC2126;
+}
+.orderBox {
+  padding-bottom: 20rpx;
+  box-sizing: border-box;
+}
+.orderBox .orderItem {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 0rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+}
+.orderBox .orderItem .orderNumber,
+.orderBox .orderItem .orderPrice,
+.orderBox .orderItem .orderType,
+.orderBox .orderItem .orderTime {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0rpx 30rpx;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+}
+.orderBox .orderItem .orderNumber .orderContent,
+.orderBox .orderItem .orderPrice .orderContent,
+.orderBox .orderItem .orderType .orderContent,
+.orderBox .orderItem .orderTime .orderContent,
+.orderBox .orderItem .orderNumber .orderNum,
+.orderBox .orderItem .orderPrice .orderNum,
+.orderBox .orderItem .orderType .orderNum,
+.orderBox .orderItem .orderTime .orderNum {
+  font-size: 32rpx;
+}
+.orderBox .orderItem .orderItemPrice {
+  font-size: 38rpx;
+  color: #EC2126;
+}
+.quanbu {
+  width: 100%;
+  height: 90rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36rpx;
+  color: #ccc;
 }

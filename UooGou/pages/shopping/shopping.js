@@ -27,7 +27,6 @@ Page({
     let { disabled } = this.data;
     let CartData = wx.getStorageSync('CartData') || {};
     let cart = wx.getStorageSync('cart') || [];
-
     if (cart.length!=0) {
       disabled=false;
     } else {
@@ -41,33 +40,47 @@ Page({
   },
   // 获取用户地址权限
   handleAddress() {
+    let _this = this;
     wx.getSetting({
       success(res) {
-        if (JSON.stringify(res.authSetting) === '{}'　|| res.authSetting["scope.address"] ) {
-          wx.chooseAddress({
-            success(data) {
-              let CartData = {
-                address: data.provinceName + data.cityName + data.countyName + data.detailInfo,
-                userName: data.userName,
-                phone: data.telNumber
-              }
-              wx.setStorageSync('CartData', CartData);
-            }
-          })
+        console.log(res,'res');
+        let type = res.authSetting["scope.address"]; 
+        if (type===true||type===undefined) {
+          _this.getAddress();
         } else {
-          wx.openSetting();
+          wx.openSetting({
+            success: (result)=>{
+              console.log(result,222);
+              _this.getAddress();
+            }
+          });
         }
       }
     });
   },
+  // 获取地址数据
+  getAddress() {
+    let _this = this;
+    wx.chooseAddress({
+      success(data) {
+        let CartData = {
+          address: data.provinceName + data.cityName + data.countyName + data.detailInfo,
+          userName: data.userName,
+          phone: data.telNumber
+        }
+        _this.setData({
+          CartData
+        })
+        wx.setStorageSync('CartData', CartData);
+      }
+    })
+  },
   // 勾选购物车列表
   checkboxChange (e) {
-    
     let { goodsid } = e.currentTarget.dataset;
     let cart = wx.getStorageSync('cart');
     let index = cart.findIndex(v => v.goods_id === goodsid);
     cart[index].checkbox=!cart[index].checkbox;
-
     this.setCart(cart);
   },
   // 全选按钮

@@ -1,0 +1,91 @@
+page {
+  background: #F2F2F2;
+}
+.tabBar {
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  .tabBarItem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36rpx;
+    color: #666;
+    border-bottom: 1px solid transparent;
+  }
+  .isActive {
+    color: #EC2126;
+    border-bottom: 1px solid #EC2126;
+  }
+}
+.cotTit {
+  margin-top: 90rpx;
+  display: flex;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+  .cotTitIrem {
+    margin-left: 15rpx;
+    padding: 10rpx 5rpx;
+    box-sizing: border-box;
+    font-size: 32rpx;
+    box-sizing: border-box;
+    background: #ffffff;
+    color: #000;
+    border: 1px solid #999999;
+  }
+  .isActive {
+    color: #EC2126;
+    border: 1px solid #EC2126;
+  }
+}
+.tabsList {
+  background: #ffffff;
+  .tabsListItem {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10rpx 0rpx;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+    .tabsItemImg {
+      flex: 0.3;
+      image {
+        width: 100%;
+      }
+    }
+    .tabsContent {
+      flex: 0.7;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin-left: 20rpx;
+      p {
+        font-size: 30rpx;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+      text {
+        font-size: 32rpx;
+        color: #FC5A50;
+      }
+    }
+  }
+  .allText {
+    width: 100%;
+    height: 90rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    font-size: 32rpx;
+  }
+}

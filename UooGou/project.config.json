@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"preloadBackgroundData": false,
@@ -17,13 +17,14 @@
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
 		"babelSetting": {
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
 		},
 		"useIsolateContext": true,
-		"useCompilerModule": true,
+		"useCompilerModule": false,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
@@ -103,9 +104,16 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "pages/order/order",
+					"id": 6,
+					"name": "订单",
 					"pathName": "pages/order/order",
+					"query": "type=0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "收藏",
+					"pathName": "pages/collection/collection",
 					"query": "",
 					"scene": null
 				}

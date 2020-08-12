@@ -1,0 +1,29 @@
+<view class="">
+  <view class="tabBar">
+    <view class="tabBarItem {{item.isActive?'isActive':''}}"
+      wx:for="{{tabBar}}"
+      wx:key="id"
+      data-id="{{item.id}}"
+      bind:tap="handleTabNarBtn"
+    >
+    {{item.name}}
+    </view>
+  </view>
+  <view class="cotTit">
+    <view class="cotTitIrem {{type==1?'isActive':''}}" bind:tap="handleTie" data-type="1">全部</view>
+    <view class="cotTitIrem {{type==2?'isActive':''}}" bind:tap="handleTie" data-type="2">正在热卖</view>
+    <view class="cotTitIrem {{type==3?'isActive':''}}" bind:tap="handleTie" data-type="3">即将推出</view>
+  </view>
+  <view class="tabsList">
+    <view class="tabsListItem" wx:for="{{shouchang}}" wx:key="goods_id" data-goodsId="{{item.goods_id}}" bind:tap="handleGoodsList">
+      <view class="tabsItemImg">
+        <image class="" src="{{item.goods_small_logo}}" mode="widthFix"></image>
+      </view>
+      <view class="tabsContent">
+        <p>{{item.goods_name}}</p>
+        <text class="">￥{{item.goods_price}}</text>
+      </view>
+    </view>
+    <view class="allText">--已加载全部--</view>
+  </view>
+</view>

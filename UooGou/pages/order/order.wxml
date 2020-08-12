@@ -10,4 +10,47 @@
       {{item.text}}
     </view>
   </view>
+  <!-- 订单栏 -->
+  <view class="orderBox">
+    <view class="orderItem" 
+      wx:for="{{orders.list}}"
+      wx:key="orderPriceNum"
+      >
+      <view class="orderNumber">
+        <view class="orderContent" hover-class="none" hover-stop-propagation="false">
+          {{item.orderContent}}
+        </view>
+        <view class="orderNum" hover-class="none" hover-stop-propagation="false">
+          {{item.orderNum}}
+        </view>
+      </view>
+      <view class="orderPrice">
+        <view class="orderContent" hover-class="none" hover-stop-propagation="false">
+          {{item.orderPrice}}
+        </view>
+        <view class="orderNum orderItemPrice" hover-class="none" hover-stop-propagation="false">
+          ￥ {{item.orderPriceNum}}
+        </view>
+      </view>
+      <view class="orderType">
+        <view class="orderContent" hover-class="none" hover-stop-propagation="false">
+          {{item.orderType}}
+        </view>
+        <view class="orderNum" hover-class="none" hover-stop-propagation="false">
+          {{item.orderTypeContent}}
+        </view>
+      </view>
+      <view class="orderTime" hover-class="none" hover-stop-propagation="false">
+        <view class="orderContent">
+          {{item.orderTime}}
+        </view>
+        <view class="orderNum" hover-class="none" hover-stop-propagation="false">
+          {{item.orderTimeNum}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="quanbu">
+    -- 已加载全部 --
+  </view>
 </view>
