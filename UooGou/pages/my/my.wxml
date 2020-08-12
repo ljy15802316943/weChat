@@ -74,7 +74,7 @@
         收货地址管理
       </view>
       <!-- 联系客服 -->
-      <view class="user_item">
+      <view class="user_item" bind:tap="handleUserPhone" data-type="400-618-4000">
         <view class="user_item_text">联系客服</view>
         <view class="user_item_phone">400-618-4000</view>
       </view>

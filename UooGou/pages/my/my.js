@@ -27,6 +27,16 @@ Page({
       userNavNum
     });
   },
+  // 拨打电话
+  handleUserPhone(e) {
+    let { type } = e.currentTarget.dataset;
+    wx.makePhoneCall({
+      phoneNumber: type, //仅为示例，并非真实的电话号码
+      fail(err) {
+        console.log(err);
+      }
+    })
+  },
   getUserInfo(e) {
     let { userInfo } = e.detail; 
     wx.setStorageSync('userInfo', userInfo);
