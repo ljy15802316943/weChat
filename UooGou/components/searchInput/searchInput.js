@@ -19,6 +19,9 @@ Component({
    */
   methods: {
     handleSearch () {
+      wx.navigateTo({
+        url: '/pages/search/search',
+      })
       console.log('点击成功');
     }
   }

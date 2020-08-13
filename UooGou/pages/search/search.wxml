@@ -1,0 +1,23 @@
+<view class="">
+  <view class="searchInput">
+    <input class="inoutBox" 
+      type="text" 
+      placeholder="输入关键字进行搜索" 
+      bind:input="searchInput"
+      value="{{inputValue}}"
+    />
+    <view class="cancel" bind:tap="handleEmpty" wx:if="{{valueNone}}">取消</view>
+  </view>
+  <view class="searchContent">
+    <navigator class="cotItem" 
+      wx:for="{{qsearch}}"
+      wx:key="goods_id"
+      url="/pages/goodsDetail/goodsDetail?goods_id={{item.goods_id}}"
+    >
+      {{item.goods_name}}
+    </navigator >
+    <view class="beyondSearch" wx:if="{{qsearch.length<1&&valueNone}}">
+      超出搜索范围了，请重新输入关键字搜索吧!
+    </view>
+  </view>
+</view>
