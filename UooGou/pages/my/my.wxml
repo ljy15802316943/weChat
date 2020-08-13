@@ -79,9 +79,9 @@
         <view class="user_item_phone">400-618-4000</view>
       </view>
       <!-- 意见反馈 -->
-      <view class="user_item user_fankui">
+      <navigator url="/pages/feedback/feedback" class="user_item user_fankui">
         意见反馈
-      </view>
+      </navigator>
       <!-- 关于我们 -->
       <view class="user_item user_my">
         关于我们

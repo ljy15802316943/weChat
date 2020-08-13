@@ -1,0 +1,72 @@
+page {
+  background: #ededed;
+}
+.tabBar_container {
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+}
+.tabBar_container .tabBar_item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2rpx solid transparent;
+}
+.tabBar_container .isActive {
+  color: #EC2126;
+  border-bottom: 2rpx solid #EC2126;
+}
+.fb_content {
+  color: #666;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.fb_content .fb_box {
+  margin-top: 20rpx;
+  padding: 5rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+.fb_content .fb_box .fb_item {
+  font-size: 32rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  padding: 10rpx 30rpx;
+  box-sizing: border-box;
+  margin: 10rpx;
+}
+.fb_input_box {
+  padding: 20rpx 0rpx 10rpx 20rpx;
+  box-sizing: border-box;
+  margin: 0rpx 20rpx;
+  background: #ffffff;
+}
+.fb_input_box .fb_textarea {
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+.fb_input_box .upload {
+  margin: 0;
+  padding: 0;
+  width: 90rpx;
+  height: 90rpx;
+  font-size: 36rpx;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10rpx;
+}
+.form_btn {
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  text-align: right;
+}
+.form_btn button {
+  width: 200rpx;
+}

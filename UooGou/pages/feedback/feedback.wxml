@@ -1,0 +1,29 @@
+<view class="">
+    <!-- 导航栏 -->
+  <view class="tabBar_container">
+    <view class="tabBar_item {{item.isActive?'isActive':''}}" wx:for="{{tabBar}}" wx:key="id" data-id="{{item.id}}" bind:tap="handleTabBar">
+      {{item.text}}
+    </view>
+  </view>
+  <!-- 标签 -->
+  <view class="fb_content">
+    <view class="fb_tit">问题的种类</view>
+    <view class="fb_box">
+      <view class="fb_item">功能建议</view>
+      <view class="fb_item">购买遇到问题</view>
+      <view class="fb_item">性能问题</view>
+      <view class="fb_item">其他</view>
+    </view>
+  </view>
+  <!-- 内容 -->
+  <view class="fb_input_box">
+    <textarea class="fb_textarea"  placeholder="请描述一下您的问题"></textarea>
+    <button class="upload" size="default">+</button>
+  </view>
+  <!-- 提交 -->
+  <view class="form_btn">
+    <button class="default" size="mini" type="warn">
+      提交
+    </button>
+  </view>
+</view>
