@@ -1,4 +1,4 @@
-// pages/my/my.js
+import { showToast } from '../../static/js/public'
 Page({
 
   /**
@@ -43,5 +43,16 @@ Page({
     this.setData({
       userInfo
     });
+  },
+  // 暂未开放
+  handleClose() {
+    showToast('暂未开放','none');
+  },
+  // 点击分享
+  handleShare() {
+    wx.updateShareMenu({
+      withShareTicket: true,
+      success() { }
+    })
   }
 })

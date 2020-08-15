@@ -22,9 +22,6 @@ page {
   color: #666;
   padding: 20rpx;
   box-sizing: border-box;
-  .fb_tit {
-
-  }
   .fb_box {
     margin-top: 20rpx;
     padding: 5rpx;
@@ -37,9 +34,14 @@ page {
       justify-content: center;
       align-items: center;
       background: #ffffff;
-      padding: 10rpx 30rpx;
+      padding: 10rpx 20rpx;
       box-sizing: border-box;
+      border: 1px solid transparent;
       margin: 10rpx;
+    }
+    .isActive {
+      color: #EC2126;
+      border: 1px solid #EC2126;
     }
   }
 }
@@ -52,17 +54,54 @@ page {
     padding: 10rpx;
     box-sizing: border-box;
   }
-  .upload {
-    margin: 0;
-    padding: 0;
-    width: 90rpx;
-    height: 90rpx;
-    font-size: 36rpx;
-    color: #666;
+  .imgList {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10rpx;
+    flex-wrap: wrap;
+    margin-top: 20rpx;
+    .upload {
+      margin: 0;
+      padding: 0;
+      width: 90rpx;
+      height: 90rpx;
+      font-size: 36rpx;
+      color: #666;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10rpx;
+    }
+    .uploadItem {
+      width: 90rpx;
+      height: 90rpx;
+      position: relative;
+      margin: 0rpx 10rpx;
+      .uploadItemImg {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        image {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .close {
+        width: 30rpx;
+        height: 30rpx;
+        font-size: 22rpx;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        position: absolute;
+        top: -10rpx;
+        right: -10rpx;
+        background: #EC2126;
+        opacity: 0.8;
+      }
+    }
   }
 }
 

@@ -20,7 +20,7 @@
     <view class="main_warp">
       <!-- 导航栏 -->
       <view class="user_nav" hover-class="none" hover-stop-propagation="false">
-        <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+        <navigator class="" target="" url="/pages/collection/collection" hover-class="navigator-hover" open-type="navigate">
           <view class="user_nav_num">0</view>
           <view class="user_nav_text">收藏的店铺</view>
         </navigator>
@@ -28,11 +28,11 @@
           <view class="user_nav_num">{{userNavNum}}</view>
           <view class="user_nav_text">收藏的商品</view>
         </navigator>
-        <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+        <navigator class="" target="" url="/pages/collection/collection" hover-class="navigator-hover" open-type="navigate">
           <view class="user_nav_num">0</view>
           <view class="user_nav_text">关注的商品</view>
         </navigator>
-        <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+        <navigator class="" target="" url="/pages/collection/collection" hover-class="navigator-hover" open-type="navigate">
           <view class="user_nav_num">0</view>
           <view class="user_nav_text">我的足迹</view>
         </navigator>
@@ -70,7 +70,7 @@
         </view>
       </view>
       <!-- 收货地址 -->
-      <view class="user_address">
+      <view class="user_address" bind:tap="handleClose">
         收货地址管理
       </view>
       <!-- 联系客服 -->
@@ -83,12 +83,14 @@
         意见反馈
       </navigator>
       <!-- 关于我们 -->
-      <view class="user_item user_my">
+      <view class="user_item user_my" bind:tap="handleClose">
         关于我们
       </view>
       <!-- 推荐他人 -->
       <view class="user_item user_tuijian">
-        把应用推荐给其他人
+        <button class="default"  plain bind:tap="handleShare" open-type="share">
+          把应用推荐给其他人
+        </button>
       </view>
     </view>
   </view>

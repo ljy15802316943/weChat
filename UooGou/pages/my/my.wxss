@@ -111,3 +111,10 @@ page {
 .main .main_warp .user_tuijian {
   margin-top: 20rpx;
 }
+.main .main_warp .user_tuijian button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 32rpx;
+  color: #666;
+}

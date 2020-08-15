@@ -14,10 +14,11 @@ const deleteCart = function () {
 };
 
 
-const showToast = function (title) {
+const showToast = function (title, icon) {
   return new Promise((resolve,reject) => {
     wx.showToast({
       title: title,
+      icon,
       mask: true,
       success: (res)=>{
         resolve(res);

@@ -21,6 +21,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    handleSwiper(e) {
+      let { goodsid } = e.currentTarget.dataset;
+      wx.navigateTo({
+        url: '/pages/goodsDetail/goodsDetail?goods_id=' + goodsid
+      })
+    }
   }
 })

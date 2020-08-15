@@ -43,7 +43,6 @@ Page({
     let _this = this;
     wx.getSetting({
       success(res) {
-        console.log(res,'res');
         let type = res.authSetting["scope.address"]; 
         if (type===true||type===undefined) {
           _this.getAddress();

@@ -1,28 +1,36 @@
 <view class="">
-    <!-- 导航栏 -->
-  <view class="tabBar_container">
-    <view class="tabBar_item {{item.isActive?'isActive':''}}" wx:for="{{tabBar}}" wx:key="id" data-id="{{item.id}}" bind:tap="handleTabBar">
-      {{item.text}}
-    </view>
-  </view>
   <!-- 标签 -->
   <view class="fb_content">
     <view class="fb_tit">问题的种类</view>
     <view class="fb_box">
-      <view class="fb_item">功能建议</view>
-      <view class="fb_item">购买遇到问题</view>
-      <view class="fb_item">性能问题</view>
-      <view class="fb_item">其他</view>
+      <view class="fb_item {{fbIndex===index?'isActive':''}}" 
+        wx:for="{{fbList}}"
+        wx:key="id"
+        data-index="{{index}}"
+        bind:tap="handleFbIndex"
+      >
+        {{item.text}}
+      </view>
     </view>
   </view>
   <!-- 内容 -->
   <view class="fb_input_box">
-    <textarea class="fb_textarea"  placeholder="请描述一下您的问题"></textarea>
-    <button class="upload" size="default">+</button>
+    <textarea class="fb_textarea" value="{{textareaValue}}" bind:input="textareaInput" placeholder="请描述一下您的问题"></textarea>
+    <view class="imgList">
+      <button class="upload" bind:tap="handleUploadImg" size="default">+</button>
+      <view class="uploadItem"
+        wx:for="{{tempFilePaths}}"
+        wx:key="index"
+      >
+        <view class="uploadItemImg">
+          <image mode="widthFix" src="{{item}}"></image>
+        </view>
+        <view class="close" bind:tap="handleDelete" data-index="{{index}}">x</view>
+      </view>
+    </view>
   </view>
-  <!-- 提交 -->
   <view class="form_btn">
-    <button class="default" size="mini" type="warn">
+    <button class="default" size="mini" type="warn" bind:tap="submit">
       提交
     </button>
   </view>

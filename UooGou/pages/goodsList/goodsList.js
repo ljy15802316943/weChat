@@ -7,7 +7,7 @@ Page({
   data: {
     queryParams: {
       query: "",
-      cid: "5",
+      cid: "",
       pagenum: 1,
       pagesize: 10
     },
@@ -42,7 +42,8 @@ Page({
    */
   onLoad: function (options) {
     let { queryParams } = this.data;
-    queryParams.cid = options.id || queryParams.cid;
+    queryParams.cid = options.id || '';
+    queryParams.query = options.query || '';
     this.setData({
       queryParams
     });

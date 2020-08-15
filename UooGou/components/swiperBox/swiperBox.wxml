@@ -2,9 +2,10 @@
 <view class="">
   <swiper class="swiper" autoplay indicator-dots circular>
     <block 
-    wx:for="{{swiperList}}" 
-    wx:key="goods_id">
-      <swiper-item>
+      wx:for="{{swiperList}}" 
+      wx:key="goods_id"
+    >
+      <swiper-item data-goodsid="{{item.goods_id}}" bind:tap="handleSwiper">
         <image src="{{item.image_src}}" mode="widthFix" />
       </swiper-item>
     </block>

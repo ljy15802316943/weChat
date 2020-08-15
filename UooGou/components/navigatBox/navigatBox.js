@@ -21,8 +21,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    handleNavItem (val) {
-      console.log( val,'val');
+    handleNavItem () {
+      wx.switchTab({
+        url: '/pages/classify/classify'
+      })
     }
   }
 })

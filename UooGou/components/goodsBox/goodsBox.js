@@ -26,7 +26,10 @@ Component({
    */
   methods: {
     handleGoodsItem(e) {
-      console.log(1);
-    }
+      let query = e.currentTarget.dataset.navigatorurl.split('=')[1];
+      wx.navigateTo({
+        url: '/pages/goodsList/goodsList?query=' + query
+      });
+    },
   }
 })
