@@ -32,25 +32,27 @@
   <scrollTop wx:if="{{scroTopHidden}}" bind:handleVBtn="handleVBtn"></scrollTop>
 
   <view class="btmBox">
-    <view class="btmService">
+    <view class="btmService" bind:tap="handleClick" data-text="客服">
       <text class="iconfont icon-lianxikefu"></text>
       客服
       <button open-type="contact"></button>
     </view>
     <view class="btmShare">
       <text class="iconfont icon-fenxiang"></text>
-      分享
-      <button open-type="share"></button>
+      <button class="btnShareItem" open-type="share" plain bind:tap="handleClick" data-text="分享">
+        分享
+      </button>
     </view>
     <view class="btmShopping">
       <text class="iconfont icon-gouwuche"></text>
-      购物车
-      <navigator url="/pages/shopping/shopping" open-type="switchTab"></navigator>
+      <navigator url="/pages/shopping/shopping" open-type="switchTab">
+        购物车
+      </navigator>
     </view>
     <view class="addShopping" bind:tap="handleCartAdd">
       加入购物车
     </view>
-    <view class="immediately">
+    <view class="immediately" bind:tap="handlePay">
       立即购买
     </view>
   </view>

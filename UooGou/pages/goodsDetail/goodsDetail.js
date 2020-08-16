@@ -114,5 +114,38 @@ Page({
     this.setData({
       collectState
     })
+  },
+  handleClick(e){
+    let { text } = e.currentTarget.dataset;
+    if (text === '分享') {
+      wx.updateShareMenu({
+        withShareTicket: true,
+        success() { }
+      })
+    } else {
+      wx.makePhoneCall({
+        phoneNumber: '400-618-4000', //仅为示例，并非真实的电话号码
+        fail(err) {
+          console.log(err);
+        }
+      })
+    }
+  },
+  // 立即购买
+  handlePay() {
+    let { goodsData } = this.data;
+    let goods_id = goodsData.goods_id;
+    let cart = wx.getStorageSync('cart')||[];
+    let index = cart.findIndex(v=>v.goods_id===goods_id);
+    console.log(index,111);
+    if (index===-1) {
+      goodsData.checkbox=true;
+      goodsData.num=1;
+      cart.push(goodsData);
+      wx.setStorageSync('cart', cart);
+    };
+    wx.navigateTo({
+      url: '/pages/pay/pay'
+    });
   }
 })
