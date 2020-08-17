@@ -1,4 +1,4 @@
-<view class="">
+<view class="goodsDetail">
   <!-- 轮播图 -->
   <swiper class="swiper" indicator-dots autoplay circular>
     <swiper-item

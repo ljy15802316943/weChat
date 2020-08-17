@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 2rpx solid transparent;
+  border-bottom: 2rpx solid #ededed;
 }
 .tabBar_container .isActive {
   color: #EC2126;
